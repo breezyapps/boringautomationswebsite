@@ -38,19 +38,6 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// Sticky mobile CTA
-const stickyCta = document.getElementById('stickyCta');
-const contactSection = document.getElementById('contact');
-let formSubmitted = false;
-function updateStickyCta() {
-  const nearContact = contactSection.getBoundingClientRect().top < window.innerHeight;
-  const show = window.scrollY > 560 && window.innerWidth < 900 && !formSubmitted && !nearContact;
-  stickyCta.classList.toggle('show', show);
-}
-window.addEventListener('scroll', updateStickyCta, { passive: true });
-window.addEventListener('resize', updateStickyCta);
-updateStickyCta();
-
 // Contact form
 const FORM_ENDPOINT = 'https://formspree.io/f/mzdnqgkd';
 
@@ -72,10 +59,8 @@ form.addEventListener('submit', async (e) => {
       body: new FormData(form),
     });
     if (!res.ok) throw new Error('form submit failed');
-    formSubmitted = true;
     form.style.display = 'none';
     thanksCard.style.display = 'block';
-    updateStickyCta();
   } catch (err) {
     formError.classList.add('show');
   }
