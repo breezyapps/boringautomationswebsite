@@ -107,9 +107,7 @@ function renderIndustries() {
 renderIndustries();
 
 // Contact form
-// TODO before going live: sign up for a free form endpoint (e.g. https://formspree.io)
-// and replace FORM_ENDPOINT below with your real form URL.
-const FORM_ENDPOINT = 'https://formspree.io/f/REPLACE_ME';
+const FORM_ENDPOINT = 'https://formspree.io/f/mzdnqgkd';
 
 const form = document.getElementById('contactForm');
 const thanksCard = document.getElementById('thanksCard');
