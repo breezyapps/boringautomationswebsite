@@ -227,29 +227,6 @@ section, footer { scroll-margin-top: 90px; }
 .step-desc { font-size: 18px; color: var(--ink-soft); }
 p.how-callout { margin: 0; padding: 18px 22px; background: var(--callout-bg); border-radius: 14px; font-size: 18px; max-width: 640px; }
 
-/* examples */
-.examples { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-.examples-inner { max-width: 1280px; margin: 0 auto; padding: 88px 24px; }
-.examples h2 { font-size: clamp(26px, 3.4vw, 36px); margin-bottom: 8px; }
-.examples > .examples-inner > p { font-size: 18px; color: var(--ink-soft); margin: 0 0 36px; max-width: 600px; }
-.examples-layout { display: flex; gap: 32px; flex-wrap: wrap; }
-.industry-tabs { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px; flex: 1 1 100%; }
-.industry-tab {
-  text-align: left; white-space: nowrap; min-height: 44px; padding: 12px 18px; border: none; border-radius: 12px;
-  font-size: 15px; font-weight: 700; cursor: pointer; background: transparent; color: var(--ink);
-  transition: background .18s ease;
-}
-.industry-tab.active { background: var(--accent); color: white; }
-.examples-panel { flex: 1 1 320px; min-width: 260px; background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 32px; }
-.examples-panel-label { font-weight: 700; font-size: 15px; letter-spacing: 0.04em; color: var(--blue); margin-bottom: 16px; }
-.example-item { display: flex; align-items: flex-start; gap: 10px; padding: 9px 0; border-top: 1px solid var(--border-soft); }
-.example-item svg { width: 20px; height: 20px; margin-top: 2px; flex-shrink: 0; }
-.example-item span { font-size: 18px; }
-
-@media (min-width: 900px) {
-  .industry-tabs { flex-direction: column; flex: 0 0 auto; }
-}
-
 /* trust */
 .trust { max-width: 1280px; margin: 0 auto; padding: 88px 24px; }
 .trust h2 { font-size: clamp(26px, 3.4vw, 36px); margin-bottom: 36px; }
