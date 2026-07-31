@@ -43,7 +43,8 @@ const stickyCta = document.getElementById('stickyCta');
 const contactSection = document.getElementById('contact');
 let formSubmitted = false;
 function updateStickyCta() {
-  const show = window.scrollY > 560 && window.innerWidth < 900 && !formSubmitted;
+  const nearContact = contactSection.getBoundingClientRect().top < window.innerHeight;
+  const show = window.scrollY > 560 && window.innerWidth < 900 && !formSubmitted && !nearContact;
   stickyCta.classList.toggle('show', show);
 }
 window.addEventListener('scroll', updateStickyCta, { passive: true });
