@@ -228,7 +228,7 @@ p.how-callout { margin: 0; padding: 18px 22px; background: var(--callout-bg); bo
 .examples h2 { font-size: clamp(26px, 3.4vw, 36px); margin-bottom: 8px; }
 .examples > .examples-inner > p { font-size: 17px; color: var(--ink-soft); margin: 0 0 36px; max-width: 600px; }
 .examples-layout { display: flex; gap: 32px; flex-wrap: wrap; }
-.industry-tabs { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px; flex: 0 0 auto; }
+.industry-tabs { display: flex; flex-direction: row; flex-wrap: wrap; gap: 8px; flex: 1 1 100%; }
 .industry-tab {
   text-align: left; white-space: nowrap; min-height: 44px; padding: 12px 18px; border: none; border-radius: 12px;
   font-size: 15px; font-weight: 700; cursor: pointer; background: transparent; color: var(--ink);
@@ -242,7 +242,7 @@ p.how-callout { margin: 0; padding: 18px 22px; background: var(--callout-bg); bo
 .example-item span { font-size: 16px; }
 
 @media (min-width: 900px) {
-  .industry-tabs { flex-direction: column; }
+  .industry-tabs { flex-direction: column; flex: 0 0 auto; }
 }
 
 /* trust */
